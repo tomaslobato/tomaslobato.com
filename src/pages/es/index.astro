@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/layout.astro"
-import "../styles/global.css"
-import Header from "../components/header.astro"
-import Nextjs from "../icons/nextjs.astro"
-import React from "../icons/react.astro"
-import Tailwind from "../icons/tailwind.astro"
-import AstroIcon from "../icons/astro.astro"
-import Typescript from "../icons/typescript.astro"
-import ExternalLink from "../icons/external-link.astro"
+import Layout from "../../layouts/layout.astro"
+import "../../styles/global.css"
+import Header from "../../components/es-header.astro"
+import Nextjs from "../../icons/nextjs.astro"
+import React from "../../icons/react.astro"
+import Tailwind from "../../icons/tailwind.astro"
+import AstroIcon from "../../icons/astro.astro"
+import Typescript from "../../icons/typescript.astro"
+import ExternalLink from "../../icons/external-link.astro"
 ---
 
 <Layout>
@@ -18,13 +18,13 @@ import ExternalLink from "../icons/external-link.astro"
         <img src="me.webp" class="w-30 h-30 md:w-40 md:h-40 rounded-full" />
         <h1 class="text-4xl md:text-6xl font-bold pt-2">Tomas Lobato</h1>
         <p class="text-lg md:text-2xl pt-1 mx-5 md:w-1/2">
-          Full-stack web developer and student from Argentina 🇦🇷
+          Desarrollador web full-stack y estudiante de Argentina 🇦🇷
         </p>
 
         <div class="pt-4 w-full">
           <span class="text-sky-400">Tech Stack</span>
           <div class="gap-4 py-3 flex justify-center items-center" id="stack">
-            <a href="https://www.typescriptlang.org/"><Typescript /></a>
+            <a href='https://www.typescriptlang.org/"'><Typescript /></a>
             <a href="https://react.dev"><React /></a>
             <a href="https://nextjs.org"><Nextjs /></a>
             <a href="https://tailwindcss.com"><Tailwind /></a>
@@ -35,7 +35,7 @@ import ExternalLink from "../icons/external-link.astro"
     </section>
     <section class="h-screen flex flex-col items-center" id="experience">
       <h1 class="text-3xl md:text-5xl font-bold italic pt-12">
-        Experience & Projects
+        Experiencia y Proyectos
       </h1>
       <ul class="flex flex-col pt-12 w-full gap-2">
         <li>
@@ -47,17 +47,17 @@ import ExternalLink from "../icons/external-link.astro"
               <img
                 src="estudio.webp"
                 alt="law firm website"
-                class="w-full h-full "
+                class="w-full h-full"
               />
             </div>
             <div class="w-3/5 gap-1.5 flex flex-col">
               <h3 class="flex gap-2 items-center text-3xl font-bold underline">
-                Family business website
+                Sitio web de negocio familiar
                 <ExternalLink size="22" />
               </h3>
               <p class="text-lg">
-                Professional landing page for my family's business (law firm).
-                Dedicated to my grandfather.
+                Landing page profesional para el negocio de mi familia (estudio de abogados).
+                <br/>Dedicado a mi abuelo.
               </p>
             </div>
           </a>
@@ -71,7 +71,7 @@ import ExternalLink from "../icons/external-link.astro"
               <img
                 src="pdx-bad.webp"
                 alt="law firm website"
-                class="w-full h-full"
+                class="w-full h-full rounded-2xl"
               />
             </div>
             <div class="w-3/5 gap-1.5 flex flex-col">
@@ -79,17 +79,14 @@ import ExternalLink from "../icons/external-link.astro"
                 PDX
                 <ExternalLink size="22" />
               </h3>
-                <p class="text-lg">
-                  AI web application to read and chat with a powerful AI model
-                  (gemini 2.0) about an uploaded PDF. <br />
-                  Limited free tier and unlimited paid tier for 5$ a month. <br/>
-                  Built with NextJS (React), Tailwind, Stripe and Google AI
-                  Studio.
-                </p>
+              <p class="text-lg ">
+                Aplicación web de IA para leer y chatear con un poderoso LLM (gemini 2.0) sobre el archivo PDF subido.<br/>
+                Capa gratuita limitada y suscripción de pago ilimitada. <br/>
+                Hecho con NextJS (React), Tailwind, Stripe y Google AI Studio. <br/>
+              </p>
             </div>
           </a>
         </li>
-
       </ul>
     </section>
   </main>
