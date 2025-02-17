@@ -7,22 +7,46 @@ import React from "../icons/react.astro"
 import Tailwind from "../icons/tailwind.astro"
 import AstroIcon from "../icons/astro.astro"
 import Typescript from "../icons/typescript.astro"
-import ExternalLink from "../icons/external-link.astro"
+import ArrowRight from "../icons/arrow-right.astro"
+import Linkedin from "../icons/linkedin.astro"
+import Github from "../icons/github.astro"
+import { Image } from "astro:assets"
 ---
 
 <Layout>
   <Header />
   <main class="w-full px-5 md:px-0 box-border md:w-4xl mx-auto">
-    <section class="pt-16 md:pt-32 md:pb-36 w-full">
+    <section class="pt-16 md:pt-32 w-full">
       <div class="flex flex-col w-full text-center items-center gap-2">
-        <img src="me.webp" class="w-30 h-30 md:w-40 md:h-40 rounded-full" />
+        <Image
+          src="/me.webp"
+          alt="me"
+          width={200}
+          height={200}
+          class="w-30 h-30 md:w-38 md:h-38 rounded-full"
+        />
         <h1 class="text-4xl md:text-6xl font-bold pt-2">Tomas Lobato</h1>
         <p class="text-lg md:text-2xl pt-1 mx-5 md:w-1/2">
           Full-stack web developer and student from Argentina 🇦🇷
         </p>
 
+        <div class="flex gap-4 text-lg md:text-2xl py-4 underline">
+          <a
+            href="https://www.linkedin.com/in/tomas-lobato-228a092a7/"
+            class="flex gap-1 items-end hover:text-sky-300 transition"
+          >
+            <Linkedin />LinkedIn
+          </a>
+          <a
+            href="https://github.com/tomaslobato"
+            class="flex gap-1 items-center hover:text-sky-300 transition"
+          >
+            <Github />Github
+          </a>
+        </div>
+
         <div class="pt-4 w-full">
-          <span class="text-sky-400">Tech Stack</span>
+          <span class="text-sky-300 font-bold">Tech Stack</span>
           <div class="gap-4 py-3 flex justify-center items-center" id="stack">
             <a href="https://www.typescriptlang.org/"><Typescript /></a>
             <a href="https://react.dev"><React /></a>
@@ -33,74 +57,152 @@ import ExternalLink from "../icons/external-link.astro"
         </div>
       </div>
     </section>
-    <section class="h-screen flex flex-col items-center" id="experience">
+    <section class="flex flex-col items-center pt-16 md:pt-32" id="experience">
       <h1 class="text-3xl md:text-5xl font-bold italic pt-12">
         Experience & Projects
       </h1>
-      <ul class="flex flex-col pt-12 w-full gap-2">
+      <ul class="flex flex-col pt-4 md:pt-12 w-full gap-2">
         <li>
           <a
             href="https://estudiolobato.com"
-            class="flex w-full gap-4 box-border p-2 rounded-lg"
+            class="flex flex-col md:flex-row w-full gap-4 p-2 rounded-lg hover:bg-zinc-800"
           >
-            <div class="w-2/5 rounded-lg h-48 bg-black">
+            <div class="w-full md:w-2/5 rounded-lg h-48 bg-black">
               <img
                 src="estudio.webp"
                 alt="law firm website"
-                class="w-full h-full "
+                class="w-full h-full"
               />
             </div>
-            <div class="w-3/5 gap-1.5 flex flex-col">
-              <h3 class="flex gap-2 items-center text-3xl font-bold underline">
+            <div class="w-full md:w-3/5 gap-1.5 flex flex-col">
+              <h3
+                class="flex gap-2 items-center text-2xl md:text-3xl font-bold underline"
+              >
                 Family business website
-                <ExternalLink size="22" />
               </h3>
-              <p class="text-lg">
+              <p class="md:text-lg">
                 Professional landing page for my family's business (law firm).
                 Dedicated to my grandfather.
               </p>
             </div>
           </a>
         </li>
+
+        <hr class="text-zinc-800" />
         <li>
           <a
             href="https://pdx.vercel.app"
-            class="flex w-full gap-4 box-border p-2 rounded-lg"
+            class="flex flex-col md:flex-row w-full gap-4 p-2 hover:bg-zinc-800 rounded-lg transition"
           >
-            <div class="w-2/5 rounded-lg h-48 bg-black">
-              <img
-                src="pdx-bad.webp"
-                alt="law firm website"
-                class="w-full h-full"
-              />
+            <div class="w-full md:w-2/5 rounded-lg h-48 bg-black">
+              <img src="pdx-bad.webp" alt="pdx" class="w-full h-full" />
             </div>
-            <div class="w-3/5 gap-1.5 flex flex-col">
-              <h3 class="flex gap-2 items-center text-3xl font-bold underline">
+            <div class="w-full md:w-3/5 gap-1.5 flex flex-col">
+              <h3
+                class="flex gap-2 items-center text-2xl md:text-3xl font-bold underline"
+              >
                 PDX
-                <ExternalLink size="22" />
               </h3>
-                <p class="text-lg">
+              <div class="md:text-lg">
+                <p>
                   AI web application to read and chat with a powerful AI model
-                  (gemini 2.0) about an uploaded PDF. <br />
-                  Limited free tier and unlimited paid tier for 5$ a month. <br/>
-                  Built with NextJS (React), Tailwind, Stripe and Google AI
-                  Studio.
+                  (gemini 2.0) about an uploaded PDF.
                 </p>
+                <p>
+                  <span class="flex items-center gap-1 pt-2">
+                    <ArrowRight /> Limited free tier and unlimited paid tier for
+                    5$ a month.</span
+                  >
+                </p>
+                <p class="flex items-center gap-1 pt-1">
+                  <ArrowRight />
+                  <span>
+                    Built with NextJS (React), Tailwind, Stripe and Gemini 2.0.
+                  </span>
+                </p>
+              </div>
             </div>
           </a>
         </li>
 
+        <hr class="text-zinc-800" />
+        <li>
+          <a
+            href="blog.tomaslobato.com"
+            class="flex md:flex-row flex-col w-full gap-4 hover:bg-zinc-800 rounded-lg p-2"
+          >
+            <div class="w-full md:w-2/5 rounded-lg h-48 bg-black">
+              <img
+                src="blog.webp"
+                alt="blog and youtube"
+                class="w-full h-full"
+              />
+            </div>
+            <div class="w-full md:w-3/5 gap-1.5 flex flex-col">
+              <h3
+                class="flex gap-2 items-center text-2xl md:text-3xl font-bold underline"
+              >
+                Blog & Youtube
+              </h3>
+              <div class="md:text-lg">
+                <p>
+                  Tutorials and Opinions about programming, AI, Hardware, Linux
+                  and more...
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
       </ul>
     </section>
-  </main>
-</Layout>
+    <section id="about" class="flex items-center flex-col pt-16">
+      <h1 class="text-3xl md:text-5xl font-bold italic md:pt-12">About Me</h1>
+      <div class="flex flex-col md:flex-row-reverse pt-5 md:py-12 w-full">
 
-<style>
-  html {
-    background-color: #111111;
-    color: white;
-  }
-  #stack a:hover {
-    width:;
-  }
-</style>
+        <div
+          class="flex items-start justify-center w-full md:w-2/5 py-4 md:py-0"
+        >
+          <Image
+            src="/computer.webp"
+            class="bg-black w-68 md:w-80 rounded-xl h-full"
+            width={400}
+            height={400}
+            alt="me programming"
+          />
+        </div>
+        <p class="text-xl md:text-2xl w-full md:w-3/5 gap-3 leading-8 flex flex-col">
+          <span>
+            My name is Tomas, I'm a curious young man passionate about
+            tecnology.
+          </span>
+          <span>
+            Since I discovered programming a few years ago, I dedicate most of
+            my time and energy to learn new things and develop personal and
+            professional projects.
+          </span>
+          <span>
+            I mainly develop websites and web apps with <a href="blog.tomaslobato.com/the-modern-web-stack" class="underline hover:text-sky-300">modern technologies like NextJS, Tailwind or Astro.</a>
+          </span>
+        </p>
+      </div>
+    </section>
+
+  <section id="contact" class="py-50 flex flex-col items-center justify-center text-center text-2xl px-10 gap-4">
+      <span>If you're interested in working with me, send an email to <a href="mailto:tlobatodev@gmail.com" class="underline hover:text-sky-300">tlobatodev@gmail.com</a> with a brief description of your project idea.</span>
+      <span>I'll respond in the next 24hs aiming to arrange our first meeting after considering your ideas.</span>
+    </section>
+  </main>
+  <footer class="w-full flex items-center justify-center py-6">
+    © 2025 Tomas Lobato. Almost all rights reserved.
+  </footer>
+
+  <style>
+    html {
+      background-color: #111111;
+      color: white;
+    }
+    #stack a:hover {
+      width:;
+    }
+  </style>
+</Layout>
