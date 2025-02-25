@@ -1,3 +1,2 @@
-- icon
+- images
 - blog
-- sign
